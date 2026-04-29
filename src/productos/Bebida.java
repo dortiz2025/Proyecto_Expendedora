@@ -1,4 +1,5 @@
 package productos;
 
-public abstract class Bebida {
+public abstract class Bebida extends Producto {
+
 }
