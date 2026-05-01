@@ -6,7 +6,6 @@ public enum TiposProductos {
     FANTA(1000),
     SNICKERS(1500),
     SUPER8(500),
-    DULCE(400),
     LOOP(900),
     OREO(600);
 
