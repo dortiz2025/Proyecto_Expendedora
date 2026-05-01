@@ -5,13 +5,33 @@ package enumeraciones;
  */
 public enum TipoProducto {
     /**
-     * Productos con su precio respectivo
+     * Bebida CocaCola, precio: 1300
      */
     COCACOLA(1300),
+
+    /**
+     * Bebida Fanta, precio: 1300
+     */
     FANTA(1300),
+
+    /**
+     * Bebida Sprite, precio: 1300
+     */
     SPRITE(1300),
+
+    /**
+     * Dulce Super8, precio: 500
+     */
     SUPER8(500),
+
+    /**
+     * Dulce Oreo, precio: 800
+     */
     OREO(800),
+
+    /**
+     * Dulce Loop, precio:800
+     */
     LOOP(800);
 
     /**
