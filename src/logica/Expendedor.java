@@ -1,13 +1,11 @@
 package logica;
 
-public class Expendedor {
-
-import enumeraciones.TiposProductos;
-import excepciones.NoHayProductoException;
-import excepciones.PagoIncorrectoException;
-import excepciones.PagoInsuficienteException;
-import monedas.Moneda;
-import productos.*;
+import productos.Producto;
+import productos.bebida.*;
+import productos.dulce.*;
+import monedas.*;
+import excepciones.*;
+import enumeraciones.*;
 
 public class Expendedor {
     private Deposito<CocaCola> depCoca;
@@ -16,9 +14,12 @@ public class Expendedor {
     private Deposito<Super8> depSuper8;
     private Deposito<Oreo> depOreo;
     private Deposito<Loop> depLoop;
-    private Deposito<Moneda> monVu;
+    private Deposito<Moneda> depMoneda;
 
-    public void comprarProducto(Moneda moneda, TiposProductos tipo) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
+    public Expendedor(){};
+
+    public void comprarProducto(Moneda moneda, TipoProducto tipo) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
+
         if (moneda == null) {
              throw new PagoIncorrectoException("Pago incorrecto");
         }
@@ -28,11 +29,11 @@ public class Expendedor {
             case COCACOLA:
                 productoComprado = depCoca.get();
                 break;
-            case SPRITE:
-                productoComprado = depSprite.get();
-                break;
             case FANTA:
                 productoComprado = depFanta.get();
+                break;
+            case SPRITE:
+                productoComprado = depSprite.get();
                 break;
             case SUPER8:
                 productoComprado = depSuper8.get();
@@ -44,7 +45,7 @@ public class Expendedor {
                 productoComprado = depLoop.get();
                 break;
             default:
-                monVu.add(moneda);
+                depMoneda.add(moneda);
                 throw new NoHayProductoException("Numero de deposito no valido");
         }
         if (productoComprado == null){
@@ -52,7 +53,7 @@ public class Expendedor {
 
         }
         if (moneda.getValor() < tipo.getPrecio()) {
-            monVu.add(moneda); // Devolvemos la moneda que intentó usar
+            depMoneda.add(moneda); // Devolvemos la moneda que intentó usar
             throw new PagoInsuficienteException("Dinero insuficiente.");
 
         }
