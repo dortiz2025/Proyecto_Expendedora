@@ -1,6 +1,7 @@
 package productos;
 
 public abstract class Dulce extends Producto {
+<<<<<<< HEAD
     /**
      * Asigna identificador del Dulce
      *
@@ -10,3 +11,8 @@ public abstract class Dulce extends Producto {
         super(serie);
     }
 }
+=======
+    @Override
+    public abstract String consumir();
+}
+>>>>>>> avance-benja
