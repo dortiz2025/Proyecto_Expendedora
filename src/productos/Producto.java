@@ -1,5 +1,9 @@
 package productos;
 
+/**
+ * Clase abstracta que representa un producto genérico
+ * Sirve como base para lo que se venderá en el expendedor
+ */
 public abstract class Producto {
     /**
      * Identificador del Producto
