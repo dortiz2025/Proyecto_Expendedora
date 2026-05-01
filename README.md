@@ -1,2 +1,2 @@
-# Proyecto_Expendedora
-Proyecto Expendedora
+# Proyecto_Expendedor
+Proyecto Expendedor
