@@ -1,4 +1,6 @@
-package productos;
+package productos.dulce;
+
+import productos.Producto;
 
 public class Oreo extends Producto {
     /**

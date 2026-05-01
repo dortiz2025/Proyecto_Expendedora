@@ -1,17 +1,17 @@
-package productos;
+package productos.bebida;
 
-public class Sprite extends Bebida {
+public class CocaCola extends Bebida {
     /**
      * Asigna identificador de la bebida
      *
      * @param serie Identificador de la Bebida
      */
-    public Sprite(int serie) {
+    public CocaCola(int serie) {
         super(serie);
     };
 
     @Override
     public String consumir(){
-        return "Sprite";
+        return "CocaCola";
     }
 }

@@ -2,10 +2,7 @@ package comprador;
 import logica.Deposito;
 import monedas.Moneda;
 import logica.Expendedor;
-import monedas.Moneda100;
-import productos.Bebida;
-
-import static enumeraciones.TiposProductos.SPRITE;
+import productos.bebida.Bebida;
 
 public class Comprador {
     private String sonido;

@@ -1,17 +1,17 @@
-package productos;
+package productos.bebida;
 
-public class CocaCola extends Bebida {
+public class Fanta extends Bebida {
     /**
      * Asigna identificador de la bebida
      *
      * @param serie Identificador de la Bebida
      */
-    public CocaCola(int serie) {
+    public Fanta(int serie) {
         super(serie);
     };
 
     @Override
-    public String consumir(){
-        return "CocaCola";
+    public String consumir() {
+        return "Fanta";
     }
 }

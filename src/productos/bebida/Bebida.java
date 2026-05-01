@@ -1,4 +1,6 @@
-package productos;
+package productos.bebida;
+
+import productos.Producto;
 
 public abstract class Bebida extends Producto {
     /**

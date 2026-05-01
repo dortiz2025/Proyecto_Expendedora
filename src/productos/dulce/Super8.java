@@ -1,4 +1,4 @@
-package productos;
+package productos.dulce;
 
 public class Super8 extends Dulce {
     /**

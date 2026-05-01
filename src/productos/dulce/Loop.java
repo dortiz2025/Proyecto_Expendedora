@@ -1,4 +1,4 @@
-package productos;
+package productos.dulce;
 
 public class Loop extends Dulce {
     /**
