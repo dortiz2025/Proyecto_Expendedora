@@ -1,8 +1,10 @@
 package excepciones;
 
-public class PagoInsuficienteException extends RuntimeException {
-    public PagoInsuficienteException(String mensaje) {
-
-        super(mensaje);
+/**
+ * Excepción al intentar comprar con menos dinero del necesario
+ */
+public class PagoInsuficienteException extends Exception {
+    public PagoInsuficienteException() {
+        super();
     }
 }

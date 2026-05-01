@@ -1,9 +1,11 @@
 package excepciones;
 
-public class PagoIncorrectoException extends RuntimeException {
-    public PagoIncorrectoException(String mensaje) {
-
-        super(mensaje);
+/**
+ * Excepción al intentar pagar sin dinero o dinero inválido (Moneda Null)
+ */
+public class PagoIncorrectoException extends Exception {
+    public PagoIncorrectoException() {
+        super();
     }
 }
 
