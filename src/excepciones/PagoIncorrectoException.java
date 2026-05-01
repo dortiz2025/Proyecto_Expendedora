@@ -5,6 +5,9 @@ package excepciones;
  */
 public class PagoIncorrectoException extends Exception {
     /**
+     * Constructor de la excepción
+     * Crea una instancia con una advertencia del error
+     *
      * @param mensaje Entrega razón de la excepción
      */
     public PagoIncorrectoException(String mensaje) {
