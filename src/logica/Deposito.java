@@ -3,19 +3,18 @@ package logica;
 import java.util.ArrayList;
 
 public class Deposito <T> {
-    private ArrayList<T> lista;
+    private ArrayList<T> deposito;
 
     public Deposito() {
-        this.lista = new ArrayList<>();
+        this.deposito = new ArrayList<>();
     }
     public void add(T elemento) {
-        this.lista.add(elemento);
+        this.deposito.add(elemento);
     }
     public T get() {
-        if (lista.isEmpty()) {
+        if (deposito.isEmpty()) {
             return null;
         }
-        return lista.remove(0);
+        return deposito.remove(0);
     }
-
 }
