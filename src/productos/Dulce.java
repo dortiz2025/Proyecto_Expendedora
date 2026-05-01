@@ -6,9 +6,7 @@ public abstract class Dulce extends Producto {
      *
      * @param serie Identificador del Dulce
      */
-    public Dulce(int serie){
+    public Dulce(int serie) {
         super(serie);
     }
-    @Override
-    public abstract String consumir();
 }
