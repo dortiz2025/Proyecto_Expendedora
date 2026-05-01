@@ -16,6 +16,15 @@ public abstract class Producto {
     }
 
     /**
+     * Simula lectura de identificador
+     *
+     * @return Identificador del Producto
+     */
+    public int getSerie(){
+        return serie;
+    }
+
+    /**
      * Simula consumo del producto
      *
      * @return Nombre del producto consumido
