@@ -1,7 +1,12 @@
 package productos.dulce;
 
+/**
+ * Clase abstracta que representa un Producto de tipo Oreo.
+ * Hereda se su clase padre Dulce
+ */
 public class Oreo extends Dulce {
     /**
+     * Constructor de la bebida Fanta
      * Asigna identificador del Dulce
      *
      * @param serie Identificador del Dulce
@@ -10,6 +15,11 @@ public class Oreo extends Dulce {
         super(serie);
     }
 
+    /**
+     * Simula comerse una Oreo
+     *
+     * @return Un String con el nombre del dulce ("Oreo")
+     */
     @Override
     public String consumir(){
         return "Oreo";
