@@ -4,7 +4,7 @@ import excepciones.PagoIncorrectoException;
 import excepciones.PagoInsuficienteException;
 import monedas.Moneda;
 
-public class Expendedora {
+public class Expendedor {
 
     public void comprarProducto(Moneda moneda, nu) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
         if (moneda == null) {
@@ -20,7 +20,7 @@ public class Expendedora {
             throw new NoHayProductoException("Sin stock");
 
         }
-        if (dinero insuficiente){
+        if (moneda.getValor() < prodSelec.getPrecio()){
 
             throw new PagoInsuficienteException("Dinero insuficiente");
 

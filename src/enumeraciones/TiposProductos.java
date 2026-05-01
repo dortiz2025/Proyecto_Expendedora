@@ -1,19 +1,20 @@
 package enumeraciones;
 
-public enum Enumeracion {
+public enum TiposProductos {
     COCACOLA(1300),
     SPRITE(1300),
     FANTA(1000),
-    SNICKERS(800),
+    SNICKERS(1500),
     SUPER8(500),
-    DULCE(400);
-    LOOP(900);
+    DULCE(400),
+    LOOP(900),
+    OREO(600);
 
 
 
     private final int precio;
 
-    Enumeracion(int precio){
+    TiposProductos(int precio){
         this.precio = precio;
     }
 
