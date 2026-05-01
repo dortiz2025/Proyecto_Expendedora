@@ -1,12 +1,17 @@
 package productos;
 
-public abstract class Dulce extends Producto {
+public class Oreo extends Producto {
     /**
      * Asigna identificador del Dulce
      *
      * @param serie Identificador del Dulce
      */
-    public Dulce(int serie){
+    public Oreo(int serie){
         super(serie);
+    }
+
+    @Override
+    public String consumir(){
+        return "Oreo";
     }
 }
