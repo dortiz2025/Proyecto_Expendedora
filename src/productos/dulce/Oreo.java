@@ -6,7 +6,7 @@ package productos.dulce;
  */
 public class Oreo extends Dulce {
     /**
-     * Constructor de la bebida Fanta
+     * Constructor del dulce Oreo
      * Asigna identificador del Dulce
      *
      * @param serie Identificador del Dulce
