@@ -14,7 +14,7 @@ public class Comprador {
     private String productoConsumido;
 
     // Almacena vuelto de la compra
-    private int vueltoCompra = 0;
+    private int vueltoCompra;
 
     public Comprador(Moneda moneda, TipoProducto producto, Expendedor expendedor) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
 
@@ -33,6 +33,7 @@ public class Comprador {
         // Se pide vuelto
         // Mientras no sea null -> Se sigue pidiendo
         vueltoMoneda = expendedor.getVuelto();
+        vueltoCompra = 0; //Se comienza en 0 de vuelto
         while(vueltoMoneda != null){
             //Se suma al vuelto total de la compra
             vueltoCompra += vueltoMoneda.getValor();
