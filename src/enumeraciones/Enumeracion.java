@@ -6,7 +6,10 @@ public enum Enumeracion {
     FANTA(1000),
     SNICKERS(800),
     SUPER8(500),
-    ;
+    DULCE(400);
+    LOOP(900);
+
+
 
     private final int precio;
 

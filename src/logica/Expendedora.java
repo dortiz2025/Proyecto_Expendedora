@@ -22,7 +22,7 @@ public class Expendedora {
         }
         if (dinero insuficiente){
 
-            throw new PagoInsuficienteException("");
+            throw new PagoInsuficienteException("Dinero insuficiente");
 
         }
     }
