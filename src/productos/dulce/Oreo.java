@@ -1,7 +1,5 @@
 package productos.dulce;
 
-import productos.Producto;
-
 public class Oreo extends Dulce {
     /**
      * Asigna identificador del Dulce

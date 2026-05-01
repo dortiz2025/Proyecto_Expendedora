@@ -35,12 +35,12 @@ public class Expendedor {
         depMoneda = new Deposito<>();
 
         for (int i = 0; i < cantidad; i++) {
-            depCoca.add(new CocaCola(i));
-            depSprite.add(new Sprite(i));
-            depFanta.add(new Fanta(i));
-            depSuper8.add(new Super8(i));
-            depOreo.add(new Oreo(i));
-            depLoop.add(new Loop(i));
+            depCoca.add(new CocaCola(100 + i));
+            depSprite.add(new Sprite(200 + i));
+            depFanta.add(new Fanta(300 + i));
+            depSuper8.add(new Super8(400 + i));
+            depOreo.add(new Oreo(500 + i));
+            depLoop.add(new Loop(600 + i));
         }
     }
 
@@ -88,7 +88,7 @@ public class Expendedor {
                 break;
             default:
                 depMoneda.add(moneda);
-                throw new NoHayProductoException("Numero de deposito no valido");
+                throw new NoHayProductoException("Tipo de producto no válido");
         }
         if (productoComprado == null){
             depMoneda.add(moneda);
