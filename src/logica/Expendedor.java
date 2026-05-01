@@ -88,7 +88,7 @@ public class Expendedor {
                 break;
             default:
                 depMoneda.add(moneda);
-                throw new NoHayProductoException("Numero de deposito no valido");
+                throw new NoHayProductoException("Tipo de producto no válido");
         }
         if (productoComprado == null){
             depMoneda.add(moneda);
