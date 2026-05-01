@@ -7,6 +7,10 @@ import monedas.*;
 import excepciones.*;
 import enumeraciones.*;
 
+/**
+ * Expendedora que almacena depósitos de productos y de monedas para el vuelto
+ * Procesa las compras, valida el pago y da el vuelto correspondiente
+ */
 public class Expendedor {
     private Deposito<Bebida> depCoca;
     private Deposito<Bebida> depSprite;
@@ -16,6 +20,11 @@ public class Expendedor {
     private Deposito<Dulce> depLoop;
     private Deposito<Moneda> depMoneda;
 
+    /**
+     * Constructor de la clase Expendedor
+     * Inicializa los depósitos y los llena
+     * @param cantidad con la que se llenará cada depósito
+     */
     public Expendedor(int cantidad) {
         depCoca = new Deposito<>();
         depSprite = new Deposito<>();
@@ -35,6 +44,17 @@ public class Expendedor {
         }
     }
 
+    /**
+     * Se simula la compra de un producto validando la moneda ingresada y el stock
+     * Si la compra es exitosa, guarda el vuelto en monedas de 100 en su depósito
+     * De lo contrario, devuelve la moneda original al depósito de vuelto
+     * @param moneda que ocupa el Comprador
+     * @param tipo constante indica el tipo de producto que se quiere comprar
+     * @return el producto que se compró
+     * @throws PagoIncorrectoException si la moneda es nula
+     * @throws PagoInsuficienteException si al Comprador no le alcanza para pagar el producto
+     * @throws NoHayProductoException si no hay suficiente stock del producto que se quiere comprar
+     */
     public Producto comprarProducto(Moneda moneda, TipoProducto tipo) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
 
         if (moneda == null) {
@@ -84,6 +104,11 @@ public class Expendedor {
 
         return productoComprado;
     }
+
+    /**
+     * Sacar las monedas de vuelto
+     * @return una Moneda de 100 pesos
+     */
     public Moneda getVuelto() {
         return depMoneda.get();
     }
