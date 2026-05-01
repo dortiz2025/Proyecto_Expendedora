@@ -1,7 +1,16 @@
 package productos;
 
 public class Sprite extends Bebida {
-    public Sprite() {};
+    /**
+     * Asigna identificador de la bebida
+     *
+     * @param serie Identificador de la Bebida
+     */
+    public Sprite(int serie) {
+        super(serie);
+    };
+
+    @Override
     public String consumir(){
         return "Sprite";
     }

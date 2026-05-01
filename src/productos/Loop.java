@@ -1,7 +1,16 @@
 package productos;
 
 public class Loop extends Dulce {
-    public Loop() {};
+    /**
+     * Asigna identificador del Dulce
+     *
+     * @param serie Identificador del Dulce
+     */
+    public Loop(int serie){
+        super(serie);
+    }
+
+    @Override
     public String consumir(){
         return "Loop";
     }
