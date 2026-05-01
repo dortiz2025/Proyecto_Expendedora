@@ -8,20 +8,42 @@ import excepciones.*;
 import enumeraciones.*;
 
 public class Expendedor {
-    private Deposito<CocaCola> depCoca;
-    private Deposito<Sprite> depSprite;
-    private Deposito<Fanta> depFanta;
-    private Deposito<Super8> depSuper8;
-    private Deposito<Oreo> depOreo;
-    private Deposito<Loop> depLoop;
+    private Deposito<Bebida> depCoca;
+    private Deposito<Bebida> depSprite;
+    private Deposito<Bebida> depFanta;
+    private Deposito<Dulce> depSuper8;
+    private Deposito<Dulce> depOreo;
+    private Deposito<Dulce> depLoop;
     private Deposito<Moneda> depMoneda;
 
-    public Expendedor(){};
+    public Expendedor(int cantidad) {
+        depCoca = new Deposito<>();
+        depSprite = new Deposito<>();
+        depFanta = new Deposito<>();
+        depSuper8 = new Deposito<>();
+        depOreo = new Deposito<>();
+        depLoop = new Deposito<>();
+        depMoneda = new Deposito<>();
 
-    public void comprarProducto(Moneda moneda, TipoProducto tipo) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
+        for (int i = 0; i < cantidad; i++) {
+            depCoca.add(new CocaCola(i));
+            depSprite.add(new Sprite(i));
+            depFanta.add(new Fanta(i));
+            depSuper8.add(new Super8(i));
+            depOreo.add(new Oreo(i));
+            depLoop.add(new Loop(i));
+        }
+    }
+
+    public Producto comprarProducto(Moneda moneda, TipoProducto tipo) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
 
         if (moneda == null) {
              throw new PagoIncorrectoException("Pago incorrecto");
+        }
+
+        if (moneda.getValor() < tipo.getPrecio()) {
+            depMoneda.add(moneda);
+            throw new PagoInsuficienteException("Dinero insuficiente.");
         }
 
         Producto productoComprado = null;
@@ -49,14 +71,20 @@ public class Expendedor {
                 throw new NoHayProductoException("Numero de deposito no valido");
         }
         if (productoComprado == null){
+            depMoneda.add(moneda);
             throw new NoHayProductoException("Sin stock");
-
         }
-        if (moneda.getValor() < tipo.getPrecio()) {
-            depMoneda.add(moneda); // Devolvemos la moneda que intentó usar
-            throw new PagoInsuficienteException("Dinero insuficiente.");
 
+        int vuelto = moneda.getValor() - tipo.getPrecio();
+        int cantidadMonedas100 = (vuelto/100);
+
+        for (int i = 0; i < cantidadMonedas100; i++) {
+            depMoneda.add(new Moneda100());
         }
+
+        return productoComprado;
     }
-
+    public Moneda getVuelto() {
+        return depMoneda.get();
+    }
 }
