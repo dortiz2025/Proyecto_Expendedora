@@ -26,21 +26,21 @@ public class Expendedor {
      * @param cantidad con la que se llenará cada depósito
      */
     public Expendedor(int cantidad) {
-        depCoca = new Deposito<>();
-        depSprite = new Deposito<>();
-        depFanta = new Deposito<>();
-        depSuper8 = new Deposito<>();
-        depOreo = new Deposito<>();
-        depLoop = new Deposito<>();
-        depMoneda = new Deposito<>();
+        this.depCoca = new Deposito<>();
+        this.depSprite = new Deposito<>();
+        this.depFanta = new Deposito<>();
+        this.depSuper8 = new Deposito<>();
+        this.depOreo = new Deposito<>();
+        this.depLoop = new Deposito<>();
+        this.depMoneda = new Deposito<>();
 
         for (int i = 0; i < cantidad; i++) {
-            depCoca.add(new CocaCola(100 + i));
-            depSprite.add(new Sprite(200 + i));
-            depFanta.add(new Fanta(300 + i));
-            depSuper8.add(new Super8(400 + i));
-            depOreo.add(new Oreo(500 + i));
-            depLoop.add(new Loop(600 + i));
+            this.depCoca.add(new CocaCola(100 + i));
+            this.depSprite.add(new Sprite(200 + i));
+            this.depFanta.add(new Fanta(300 + i));
+            this.depSuper8.add(new Super8(400 + i));
+            this.depOreo.add(new Oreo(500 + i));
+            this.depLoop.add(new Loop(600 + i));
         }
     }
 

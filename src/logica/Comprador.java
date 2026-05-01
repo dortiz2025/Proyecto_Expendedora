@@ -16,7 +16,7 @@ public class Comprador {
     // Almacena vuelto de la compra
     private int vueltoCompra = 0;
 
-    public Comprador(Moneda moneda, TipoProducto producto, Expendedor expendedor){
+    public Comprador(Moneda moneda, TipoProducto producto, Expendedor expendedor) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
 
         // Variable que almacena el producto comprado.
         // Puede ser null si hubo una excepción.
