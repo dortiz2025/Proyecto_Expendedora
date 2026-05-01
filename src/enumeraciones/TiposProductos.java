@@ -4,7 +4,6 @@ public enum TiposProductos {
     COCACOLA(1300),
     SPRITE(1300),
     FANTA(1000),
-    SNICKERS(1500),
     SUPER8(500),
     LOOP(900),
     OREO(600);

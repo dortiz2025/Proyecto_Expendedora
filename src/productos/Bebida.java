@@ -1,7 +1,6 @@
 package productos;
 
 public abstract class Bebida extends Producto {
-<<<<<<< HEAD
     /**
      * Asigna identificador de la bebida
      *
@@ -10,7 +9,4 @@ public abstract class Bebida extends Producto {
     public Bebida(int serie){
         super(serie);
     }
-=======
-
->>>>>>> avance-benja
 }

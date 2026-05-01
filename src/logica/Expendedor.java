@@ -1,8 +1,7 @@
 package logica;
-<<<<<<< HEAD
 
 public class Expendedor {
-=======
+
 import enumeraciones.TiposProductos;
 import excepciones.NoHayProductoException;
 import excepciones.PagoIncorrectoException;
@@ -14,7 +13,6 @@ public class Expendedor {
     private Deposito<CocaCola> depCoca;
     private Deposito<Sprite> depSprite;
     private Deposito<Fanta> depFanta;
-    private Deposito<Snickers> depSnickers;
     private Deposito<Super8> depSuper8;
     private Deposito<Oreo> depOreo;
     private Deposito<Loop> depLoop;
@@ -35,9 +33,6 @@ public class Expendedor {
                 break;
             case FANTA:
                 productoComprado = depFanta.get();
-                break;
-            case SNICKERS:
-                productoComprado = depSnickers.get();
                 break;
             case SUPER8:
                 productoComprado = depSuper8.get();
@@ -62,7 +57,5 @@ public class Expendedor {
 
         }
     }
-
->>>>>>> avance-benja
 
 }
