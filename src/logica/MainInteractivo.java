@@ -9,6 +9,13 @@ import excepciones.*;
 
 import java.util.Scanner;
 
+/**
+ * Main para que usuario interactúe con el expendedor.
+ * Puede intentar comprar productos con Monedas o sin ellas.
+ * Puede intentar comprar productos que no existen.
+ * Puede intentar comprar con más dinero del necesario
+ * o con menos.
+ */
 public class MainInteractivo {
     public static void main(String[] args) {
         //Saludo de bienvenida

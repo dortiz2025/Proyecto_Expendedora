@@ -7,15 +7,37 @@ import productos.dulce.*;
 import monedas.*;
 import enumeraciones.*;
 
-
+/**
+ * Clase que simula ser una persona
+ * que compra un producto y lo consume.
+ *
+ * "Recuerda" que ha consumido
+ * y cuanto vuelto le dieron
+ */
 public class Comprador {
 
-    // Almacena nombre del producto consumido
+    /**
+     * Almacena el nombre del producto consumido
+     */
     private String productoConsumido;
 
-    // Almacena vuelto de la compra
+    /**
+     * Almacena el vuelto recibido de una compra
+     */
+
     private int vueltoCompra;
 
+    /**
+     * Constructor de la clase que simula la compra de un producto
+     *
+     * @param moneda Medio de pago para la compra (Puede ser null)
+     * @param producto Producto que se ha elegido comprar
+     * @param expendedor Máquina con la que se interactua
+     *
+     * @throws NoHayProductoException Si no hay stock del producto o no existe
+     * @throws PagoInsuficienteException Si el dinero no alcanza
+     * @throws PagoIncorrectoException Si se compra sin dinero (Moneda null)
+     */
     public Comprador(Moneda moneda, TipoProducto producto, Expendedor expendedor) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
 
         // Variable que almacena el producto comprado.
