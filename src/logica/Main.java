@@ -15,7 +15,7 @@ import java.util.Collections;
 public class Main {
 
     /**
-     * Método principal
+     * Metodo principal
      *
      * @param args Argumentos de la línea de comandos (no se utilizan)
      */
