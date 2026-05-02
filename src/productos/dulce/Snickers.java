@@ -22,6 +22,6 @@ public class Snickers extends Dulce {
      */
     @Override
     public String consumir(){
-        return "Loop";
+        return "Snickers";
     }
 }

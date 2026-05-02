@@ -32,7 +32,7 @@ public class MainInteractivo {
         //Lista con nuestros productos enumerados
         TipoProducto[] productos = TipoProducto.values();
 
-        while(true) {
+        while (true) {
 
             //Se imprime la lista de productos
             System.out.println("A continuación nuestro catalogo:");
@@ -76,7 +76,7 @@ public class MainInteractivo {
             Moneda monedaDePago; // Inicia como null por defecto
 
             // Asignamos la instancia correspondiente según la opción
-            switch(opcionMoneda) {
+            switch (opcionMoneda) {
                 case 1:
                     monedaDePago = new Moneda100();
                     break;
@@ -114,9 +114,13 @@ public class MainInteractivo {
             //Si hay una excepción, se reporta al usuario
             catch (NoHayProductoException | PagoInsuficienteException | PagoIncorrectoException e) {
                 System.out.println("\nProblema con la compra: " + e.getMessage() + "\n");
-            }
-            finally{
 
+                //Se devuelve moneda
+                Moneda monedaDevuelta = expendedor.getVuelto();
+                if(monedaDevuelta != null) {
+                    System.out.println("Devolución de $" + monedaDevuelta.getValor());;
+                }
+                System.out.println("Intente otra vez\n");
             }
         }
     }
