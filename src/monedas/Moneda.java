@@ -9,6 +9,7 @@ public abstract class Moneda implements Comparable<Moneda>{
 
     /**
      * Constructor de clase Moneda
+     * Se inicializa una nueva instancia de Moneda sin parámetros
      */
     public Moneda() {}
 

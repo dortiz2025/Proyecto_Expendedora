@@ -17,6 +17,11 @@ import java.util.Scanner;
  * o con menos.
  */
 public class MainInteractivo {
+    /**
+     * Metodo principal encargado de mostrar el menú interactivo por consola
+     * Maneja las posibles excepciones al comprar
+     * @param args Argumentos de la línea de comandos (no se utiliza)
+     */
     public static void main(String[] args) {
         //Saludo de bienvenida
         System.out.println("Bienvenido al Expendedor Interactivo");

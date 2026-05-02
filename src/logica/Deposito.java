@@ -36,6 +36,7 @@ public class Deposito <T> {
      * Mecánica FIFO
      *
      * @return Devuelve el elemento retirado del depósito
+     * o null si el depósito se encuentra vacío
      */
     public T get() {
         if (deposito.isEmpty()) {
