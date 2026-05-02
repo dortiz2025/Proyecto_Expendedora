@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"enumeraciones"},{"l":"excepciones"},{"l":"logica"},{"l":"monedas"},{"l":"productos"},{"l":"productos.bebida"},{"l":"productos.dulce"}];updateSearchResults();
