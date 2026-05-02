@@ -118,7 +118,7 @@ public class MainInteractivo {
                 //Se devuelve moneda
                 Moneda monedaDevuelta = expendedor.getVuelto();
                 if(monedaDevuelta != null) {
-                    System.out.println("Devolución de $" + monedaDevuelta.getValor());;
+                    System.out.println("Devolución de $" + monedaDevuelta.getValor());
                 }
                 System.out.println("Intente otra vez\n");
             }

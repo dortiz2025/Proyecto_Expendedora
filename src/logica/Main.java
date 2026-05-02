@@ -52,6 +52,13 @@ public class Main {
             Comprador c3 = new Comprador(new Moneda1000(), TipoProducto.FANTA, maquina);
         } catch (PagoInsuficienteException e) {
             System.out.println("Error esperado: " + e.getMessage());
+
+            //Se devuelve moneda
+            Moneda monedaDevuelta = maquina.getVuelto();
+            if(monedaDevuelta != null) {
+                System.out.println("Devolución de $" + monedaDevuelta.getValor());
+            }
+
         } catch (Exception e) {
             System.out.println("Error incorrecto: " + e.getMessage());
         }
@@ -71,6 +78,13 @@ public class Main {
             Comprador c5 = new Comprador(new Moneda1500(), TipoProducto.COCACOLA, maquina);
         } catch (NoHayProductoException e) {
             System.out.println("Error esperado: " + e.getMessage());
+
+            //Se recupera moneda rechazada
+            Moneda devuelta = maquina.getVuelto();
+            if (devuelta != null) {
+                System.out.println("Devolución de $" + devuelta.getValor());
+            }
+
         } catch (Exception e) {
             System.out.println("Error incorrecto: " + e.getMessage());
         }
