@@ -7,7 +7,18 @@ import excepciones.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Clase Main que contiene las pruebas para la expendedora
+ * Se compran de productos, maneja el vuelto, y se ven la generación
+ * de excepciones y el ordenamiento de monedas
+ */
 public class Main {
+
+    /**
+     * Método principal
+     *
+     * @param args Argumentos de la línea de comandos (no se utilizan)
+     */
     public static void main(String[] args) {
         System.out.println("--- Pruebas expendedora ---");
 
