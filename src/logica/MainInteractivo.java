@@ -99,14 +99,17 @@ public class MainInteractivo {
                 Comprador comprador = new Comprador(monedaDePago, productoElegido, expendedor);
 
                 //Si se hace la compra mostramos que se consumió y si sobro vuelto;
-                System.out.println("¡Compra exitosa!");
+                System.out.println("¡Compra exitosa!\n");
                 System.out.println("Consumiste: " + comprador.queConsumiste());
-                System.out.println("Tu vuelto es: $" + comprador.cuantoVuelto());
+                System.out.println("Tu vuelto es: $" + comprador.cuantoVuelto() + "\n");
 
             }
             //Si hay una excepción, se reporta al usuario
             catch (NoHayProductoException | PagoInsuficienteException | PagoIncorrectoException e) {
-                System.out.println("Problema con la compra: " + e.getMessage());
+                System.out.println("\nProblema con la compra: " + e.getMessage() + "\n");
+            }
+            finally{
+
             }
         }
     }
