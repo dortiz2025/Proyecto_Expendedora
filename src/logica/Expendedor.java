@@ -17,7 +17,7 @@ public class Expendedor {
     private Deposito<Bebida> depFanta;
     private Deposito<Dulce> depSuper8;
     private Deposito<Dulce> depOreo;
-    private Deposito<Dulce> depLoop;
+    private Deposito<Dulce> depSnickers;
     private Deposito<Moneda> depMoneda;
 
     /**
@@ -31,7 +31,7 @@ public class Expendedor {
         this.depFanta = new Deposito<>();
         this.depSuper8 = new Deposito<>();
         this.depOreo = new Deposito<>();
-        this.depLoop = new Deposito<>();
+        this.depSnickers = new Deposito<>();
         this.depMoneda = new Deposito<>();
 
         for (int i = 0; i < cantidad; i++) {
@@ -40,7 +40,7 @@ public class Expendedor {
             this.depFanta.add(new Fanta(300 + i));
             this.depSuper8.add(new Super8(400 + i));
             this.depOreo.add(new Oreo(500 + i));
-            this.depLoop.add(new Loop(600 + i));
+            this.depSnickers.add(new Snickers(600 + i));
         }
     }
 
@@ -83,8 +83,8 @@ public class Expendedor {
             case OREO:
                 productoComprado = depOreo.get();
                 break;
-            case LOOP:
-                productoComprado = depLoop.get();
+            case SNICKERS:
+                productoComprado = depSnickers.get();
                 break;
             default:
                 depMoneda.add(moneda);

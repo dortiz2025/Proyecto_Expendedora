@@ -1,24 +1,24 @@
 package productos.dulce;
 
 /**
- * Clase de un Producto de tipo Loop
+ * Clase de un Producto de tipo Snickers
  * Hereda de su padre Dulce
  */
-public class Loop extends Dulce {
+public class Snickers extends Dulce {
     /**
-     * Constructor del Loop
+     * Constructor del Snickers
      * Asigna identificador del Dulce
      *
      * @param serie Identificador del Dulce
      */
-    public Loop(int serie){
+    public Snickers(int serie){
         super(serie);
     }
 
     /**
-     * Simula comerse un Loop
+     * Simula comerse un Snickers
      *
-     * @return Un String con el nombre del dulce ("Loop)
+     * @return Un String con el nombre del dulce ("Snickers")
      */
     @Override
     public String consumir(){

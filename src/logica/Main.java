@@ -38,7 +38,7 @@ public class Main {
             Comprador c3 = new Comprador(new Moneda1000(), TipoProducto.OREO, maquina);
             System.out.println("Comprado: " + c3.queConsumiste() + " | Vuelto: " + c3.cuantoVuelto());
 
-            Comprador c4 = new Comprador(new Moneda1000(), TipoProducto.LOOP, maquina);
+            Comprador c4 = new Comprador(new Moneda1000(), TipoProducto.SNICKERS, maquina);
             System.out.println("Comprado: " + c4.queConsumiste() + " | Vuelto: " + c4.cuantoVuelto());
 
         } catch (Exception e) {

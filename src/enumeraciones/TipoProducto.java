@@ -30,9 +30,9 @@ public enum TipoProducto {
     OREO(800),
 
     /**
-     * Dulce Loop, precio:800
+     * Dulce SNICKERS, precio:800
      */
-    LOOP(800);
+    SNICKERS(1000);
 
     /**
      * Precio Constante

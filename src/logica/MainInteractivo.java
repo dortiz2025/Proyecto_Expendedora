@@ -10,7 +10,7 @@ import excepciones.*;
 import java.util.Scanner;
 
 public class MainInteractivo {
-    static void main() {
+    public static void main(String[] args) {
         //Saludo de bienvenida
         System.out.println("Bienvenido al Expendedor Interactivo");
         System.out.println();//Estética
